@@ -20,7 +20,7 @@ def cli(ctx, debug):
 @cli.command()
 @click.option('-d', '--dryrun', default=False, type=bool, is_flag=True)
 @click.option('-v', '--verbose', default=False, type=bool, is_flag=True)
-@click.option('-r', '--profile_name', default="default")
+@click.option('-p', '--profile_name', default="default")
 @click.option('-r', '--region_name', default="us-east-1")
 def vpcs(dryrun, verbose, profile_name, region_name):
     """Map VPC and peer connections."""
@@ -31,7 +31,7 @@ def vpcs(dryrun, verbose, profile_name, region_name):
 @cli.command()
 @click.option('-d', '--dryrun', default=False, type=bool, is_flag=True)
 @click.option('-v', '--verbose', default=False, type=bool, is_flag=True)
-@click.option('-r', '--profile_name', default="default")
+@click.option('-p', '--profile_name', default="default")
 @click.option('-r', '--region_name', default="us-east-1")
 def subnets(dryrun, verbose, profile_name, region_name):
     """Map VPC and peer connections."""
