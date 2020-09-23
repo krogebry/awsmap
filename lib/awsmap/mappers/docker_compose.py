@@ -5,7 +5,7 @@ from lib.awsmap.map import Map
 from diagrams import Cluster, Diagram, Edge
 from diagrams.aws.network import VPC, InternetGateway, NATGateway, ClientVpn, SiteToSiteVpn
 
-from diagrams.oci.storage import Filestorage
+from diagrams.oci.storage import FileStorage
 from diagrams.oci.compute import Container
 
 class DockerComposeMapper(Map):
