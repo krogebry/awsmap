@@ -1,14 +1,15 @@
 import os
 import json
 import glob
-from os import path
-from os import environ
+from os import path, mkdir
 
 
 class Cache:
     def __init__(self, verbose=False):
-        self.cache_dir = "/tmp/cache"
+        self.cache_dir = "/tmp/awsmap-cache"
         self.verbose = verbose
+        if not path.exists(self.cache_dir):
+            mkdir(self.cache_dir)
 
     def p(self, msg):
         if self.verbose:
