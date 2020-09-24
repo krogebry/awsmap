@@ -37,7 +37,7 @@ class DockerComposeMapper(Map):
                     service_containers[service_name] = container
                     if "volumes" in service_config.keys():
                         for volume in service_config['volumes']:
-                            container << Filestorage("\n".join(volume.split(":")))
+                            container << FileStorage("\n".join(volume.split(":")))
 
                     if "ports" in service_config.keys():
                         for port in service_config['ports']:
